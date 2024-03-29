@@ -335,7 +335,6 @@
 .button-container button:hover{
   background-color: rgb(116, 82, 148);
   font-size: 1.1rem;
-  transition: all 2s linear 1s;
 }
 
 

@@ -8,7 +8,7 @@ chats.scrollTop = chats.scrollHeight;
 // display typing animation 
 function displayTypingAnimation(){
     document.getElementById("typing-text").innerHTML=
-    "Tomal is typing ...";
+    "Saifuddin is typing ...";
 }
 
 // hide typing animation 
@@ -81,6 +81,8 @@ function showSenderMessage(){
     chats.appendChild(senderDiv);
 
     document.getElementById("text-message").value="";
+    displayTypingAnimation();
+    
     chats.scrollTop = chats.scrollHeight;
 
 }
@@ -112,6 +114,8 @@ function getReceiverMessage(){
 
 // display receiver image 
 function showReceiverMessage(){
+
+    hideTypingAnimation();
 
     // receiver container 
     let receiverDiv = document.createElement('div');
@@ -148,6 +152,7 @@ function showReceiverMessage(){
 
     chats.appendChild(receiverDiv);
 
+    hideTypingAnimation();
     chats.scrollTop = chats.scrollHeight;
 }
 
@@ -166,6 +171,8 @@ function sendMessage(){
 
     showSenderMessage();
     sendingStatusChange();
+    
     setTimeout(showReceiverMessage,5000);
+    
 
 }
